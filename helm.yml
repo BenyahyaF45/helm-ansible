@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+#  become: yes
+  gather_facts: false
+  roles:
+#  - role: helm
+  - role: sonar
+  - role: nfs
+  - role: nexus
+
+
+

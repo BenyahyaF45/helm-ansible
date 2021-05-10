@@ -1,0 +1,14 @@
+---
+# tasks file for sonar
+- name: install nexus
+  community.kubernetes.helm:
+    name: nexus
+    chart_ref: ~/helm/nexus
+    release_namespace: default
+
+
+
+
+
+
+

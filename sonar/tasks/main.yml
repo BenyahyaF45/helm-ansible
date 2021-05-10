@@ -1,0 +1,7 @@
+---
+# tasks file for sonar
+- name: install sonar
+  community.kubernetes.helm:
+    name: sonar
+    chart_ref: ~/helm/sonar
+    release_namespace: default

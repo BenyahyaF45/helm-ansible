@@ -1,0 +1,15 @@
+---
+# tasks file for helm
+- name: INSTALL CURL
+  apt:
+    name: curl
+    state: present
+
+- name: DOWNLOAD get_helm.sh
+  shell: curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+
+- name: GIVE EXECUTING TO get_helm.sh
+  file: dest=get_helm.sh mode=a+x
+
+- name: INSTALL HELM
+  shell: ./get_helm.sh
